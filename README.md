@@ -4,13 +4,14 @@ Camp-on ("ring me back when free") for Issabel PBX (chan_sip). No module to inst
 
 قابلیت «خبرم کن وقتی آزاد شد» برای ایزابل (chan_sip)، بدون نصب ماژول: فقط یک تکه دایال‌پلن.
 
-## What it does / چه می‌کند
+به داخلی‌ای زنگ می‌زنید که مشغول است. پیام پخش می‌شود: با **۱** تماس قطع می‌شود و هر وقت هر دو گوشی آزاد شدند (حداکثر ۳۰ دقیقه) گوشی شما زنگ می‌خورد و با برداشتن، داخلی مقصد گرفته می‌شود. بدون زدن ۱ تماس مثل قبل پشت‌خطی می‌شود
+
+## What it does
 
 An extension calls another extension that is on a call. A prompt plays: press **1**, the call ends, and the server rings you back as soon as both phones are free (max 30 min), then dials the other extension when you pick up. Without **1** the call continues as a normal call-waiting call.
+.
 
-به داخلی‌ای زنگ می‌زنید که مشغول است. پیام پخش می‌شود: با **۱** تماس قطع می‌شود و هر وقت هر دو گوشی آزاد شدند (حداکثر ۳۰ دقیقه) گوشی شما زنگ می‌خورد و با برداشتن، داخلی مقصد گرفته می‌شود. بدون زدن ۱ تماس مثل قبل پشت‌خطی می‌شود.
-
-## Install / نصب
+## Install
 
 Written on an Issabel server running Asterisk 18 with chan_sip. Back up `/etc/asterisk/extensions_custom.conf` first.
 
@@ -20,7 +21,7 @@ Written on an Issabel server running Asterisk 18 with chan_sip. Back up `/etc/as
 
 To undo, remove the block and reload.
 
-## Limits / محدودیت‌ها
+## Limits
 
 - chan_sip only (`SIP/` channels, device name equal to extension number). Not written for PJSIP.
 - Only direct extension-to-extension calls; ring groups, queues, and trunk calls are untouched.
